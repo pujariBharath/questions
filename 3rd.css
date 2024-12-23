@@ -1,0 +1,129 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Make content take up more space */
+    padding: 40px; /* Add padding for spacing */
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px; /* More spacing */
+  }
+  
+  .start-link {
+    font-size: 24px; /* Larger font */
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .toggle-mode {
+    background: none;
+    border: none;
+    font-size: 32px; /* Larger toggle icon */
+    cursor: pointer;
+  }
+  
+  .question p {
+    font-size: 28px; /* Larger text for question */
+    margin-bottom: 20px;
+  }
+  
+  .word {
+    font-size: 48px; /* Larger word display */
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap between buttons */
+    margin-bottom: 40px; /* Spacing from Confirm button */
+  }
+  
+  .response-btn {
+    font-size: 24px; /* Larger buttons */
+    padding: 20px 40px; /* Bigger padding for buttons */
+    border: 2px solid #000;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .response-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  body.dark-mode .start-link{
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .response-btn {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .response-btn:hover {
+    background-color: #333333;
+  }
+  
+  body.dark-mode .confirm-btn {
+    border-color: #000000;
+  }
+  
+  body.dark-mode .confirm-btn.enabled {
+    background-color: #ffffff;
+    color: #121212;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .response-btn {
+      padding: 15px 30px;
+      font-size: 20px;
+    }
+  
+    .confirm-btn {
+      padding: 15px 40px;
+      font-size: 18px;
+    }
+  
+    .question p {
+      font-size: 22px;
+    }
+  
+    .word {
+      font-size: 36px;
+    }
+  
+    .start-link {
+      font-size: 20px;
+    }
+  
+    .toggle-mode {
+      font-size: 28px;
+    }
+  }
+  

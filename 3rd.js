@@ -43,3 +43,13 @@ confirmBtn.addEventListener("click", () => {
     alert(`You selected: ${selected}`);
   }
 });
+function enableConfirm() {
+    confirmBtn.disabled = false;
+    confirmBtn.classList.add("enabled");
+  }
+  
+  confirmBtn.addEventListener("click", () => {
+    if (selected) {
+      alert(`You selected: ${selected}`);
+    }
+  });

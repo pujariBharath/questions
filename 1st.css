@@ -1,78 +1,128 @@
-/* General Reset */
+/* General styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px; /* Make content take up more space */
+  padding: 40px; /* Add padding for spacing */
+  box-sizing: border-box;
 }
 
-/* Title */
-.title {
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-}
-.one{
-    font-size: 32px;
-    color: #918c8c;
-    animation: forwards;
-}
-.two{
-    font-size: 32px;
-    text-align: center;
-    height: 100vh;
-  justify-content: center; /* Horizontally center */
-  align-items: center;    /* Vertically center */
-  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px; /* More spacing */
 }
 
-
-
-
-
-
-
-
-/* Dark/Light Mode Toggle */
-.toggle-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: inherit;
+.start-link {
+  font-size: 24px; /* Larger font */
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.instructions-box.dark-mode {
-    color: #000000;
-    border-color: #444;
-    background-color: #000000;
+.toggle-mode {
+  background: none;
+  border: none;
+  font-size: 32px; /* Larger toggle icon */
+  cursor: pointer;
 }
 
-body.dark-mode .submit-button {
-    background-color: #555;
-}
-.email-input.dark-mode{
-    background-color: #ffffff;
-    color: #ffffff;
-    border-color: #444;
-
+.question p {
+  font-size: 28px; /* Larger text for question */
+  margin-bottom: 20px;
 }
 
-body.dark-mode{
-    background-color: #000000;
-    color: #ffffff;
-    border-color: #444;
+.word {
+  font-size: 48px; /* Larger word display */
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap between buttons */
+  margin-bottom: 40px; /* Spacing from Confirm button */
+}
+
+.response-btn {
+  font-size: 24px; /* Larger buttons */
+  padding: 20px 40px; /* Bigger padding for buttons */
+  border: 2px solid #000;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.response-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode .start-link{
+  color: #f0f0f0;
+}
+
+body.dark-mode .response-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+body.dark-mode .response-btn:hover {
+  background-color: #333333;
+}
+
+body.dark-mode .confirm-btn {
+  border-color: #000000;
+}
+
+body.dark-mode .confirm-btn.enabled {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .response-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+
+  .confirm-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+  }
+
+  .question p {
+    font-size: 22px;
+  }
+
+  .word {
+    font-size: 36px;
+  }
+
+  .start-link {
+    font-size: 20px;
+  }
+
+  .toggle-mode {
+    font-size: 28px;
+  }
 }
